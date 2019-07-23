@@ -6,4 +6,30 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-input placeholder="Number 1" [(ngModel)]="numberA" type="number"></ion-input>
+      </ion-col>
+      <ion-col>
+          <ion-input placeholder="Number 2" [(ngModel)]="numberB" type="number"></ion-input>
+        </ion-col>
+      <ion-col>
+          <ion-item *ngIf="total">= {{ total }}</ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="sum()" style="font-size:2em;">+</ion-button>
+      </ion-col>
+      <ion-col>
+          <ion-button (click)="minus()" style="font-size:2em;">-</ion-button>
+        </ion-col>
+        <ion-col>
+            <ion-button (click)="product()" style="font-size:2em;">X</ion-button>
+          </ion-col>
+    </ion-row>
+    
+  </ion-grid>
+</ion-content>
