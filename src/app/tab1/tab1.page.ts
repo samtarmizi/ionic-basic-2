@@ -19,14 +19,17 @@ export class Tab1Page {
 
   add(){
     this.total = this.calc.addition(this.numA, this.numB);
+    this.calc.page1_result = this.total;
   }
 
   subtract(){
     this.total = this.calc.subtraction(this.numA, this.numB);
+    this.calc.page1_result = this.total;
   }
 
   multiply(){
     this.total = this.calc.multiply(this.numA, this.numB);
+    this.calc.page1_result = this.total;
   }
 
 }
