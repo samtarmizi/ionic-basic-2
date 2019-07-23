@@ -6,4 +6,18 @@ import { Injectable } from '@angular/core';
 export class CalculateService {
 
   constructor() { }
+
+  addition(numA , numB){
+    return Number(numA) + Number(numB);
+  }
+
+  subtraction(numA , numB){
+    return Number(numA) - Number(numB);
+  }
+
+  multiply(numA , numB){
+    return Number(numA) * Number(numB);
+  }
+
+
 }
