@@ -6,4 +6,54 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+<app-title></app-title>
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-input type="text" [(ngModel)]="key" placeholder="Key"></ion-input>
+    </ion-col>
+    <ion-col>
+      <ion-input type="text" [(ngModel)]="data" placeholder="Data"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="set_data()">
+          <ion-icon name="save" slot="start"></ion-icon> SAVE
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-input type="text" [(ngModel)]="retrieve_key" placeholder="Ret Key"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="get_data()">
+        Search Data
+        <ion-icon name="search" slot="end"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button color="danger" (click)='delete_data()'>
+        <ion-icon name="trash" slot="icon-only" ></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      {{retrieve_data}}
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+</ion-content>

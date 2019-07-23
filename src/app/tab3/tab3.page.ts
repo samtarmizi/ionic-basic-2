@@ -10,6 +10,7 @@ export class Tab3Page {
 
   key:any;
   data:any;
+
   retrieve_key:any;
   retrieve_data:any;
 
@@ -17,19 +18,24 @@ export class Tab3Page {
     public lss:LocalStorageService
   ) {}
 
-  set_data(){
+  set_data()
+  {
     this.lss.create_data(this.key,this.data);
   }
 
-  get_data(){
-    this.lss.read_data(this.retrieve_key).then(response=>{
+  get_data()
+  {
+    this.lss.read_data(this.retrieve_key)
+    .then(response=>{
+      //console.log("resp",response);
       this.retrieve_data=response;
     },err=>{
       console.log("ERROR",err);
     })
   }
 
-  delete_data(){
+  delete_data()
+  {
     this.lss.delete_data(this.retrieve_key);
   }
 }
