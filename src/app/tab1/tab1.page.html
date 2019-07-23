@@ -7,9 +7,14 @@
 </ion-header>
 
 <ion-content>
+  DATE PIPE<br>
   {{ 1563853137*1000 | date:'short'}} <br>
   {{ 1563853137*1000 | date:'medium'}}<br>
-  {{ 1563853137*1000 | date:'long'}}
+  {{ 1563853137*1000 | date:'long'}}<br>
+
+  CURRENCY PIPE<br>
+  {{ 123| currency}} <br>
+  
   <ion-list>
     <!-- Start Input -->
     <ion-item>
