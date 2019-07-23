@@ -24,6 +24,7 @@
       </ion-input>
     </ion-item>
     <!-- End Input -->
+    <!-- Button to call function -->
     <ion-item>
       <ion-button
         (click)="add()">Addition
@@ -35,8 +36,11 @@
         (click)="multiply()">Multiplication
       </ion-button>
     </ion-item>
+    <!-- End Button -->
+    <!-- Display Output if there is output -->
     <ion-item *ngIf="total">
         <h1><b> {{ total }} </b></h1>
       </ion-item>
+    <!-- End Display Output -->
   </ion-list>
 </ion-content>
